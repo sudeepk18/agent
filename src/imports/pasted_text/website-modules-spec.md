@@ -1,0 +1,354 @@
+I have provided reference screenshots for 4 modules of the website.
+
+Use ALL of the attached screenshots as the PRIMARY visual reference.
+
+Your task is to recreate the four modules as a single cohesive, production-quality web application.
+
+IMPORTANT:
+- Do NOT redesign the screenshots.
+- Do NOT create a generic interpretation.
+- Reproduce the visual design as closely as possible.
+- Treat the screenshots as the source of truth for layout, spacing, typography, colors, cards, buttons, borders, gradients, shadows, imagery, and visual hierarchy.
+- Do not simply place the screenshots on the page.
+- Rebuild everything using real HTML/CSS/React components.
+- All elements visible in the screenshots must be implemented as actual UI elements.
+- The four modules must feel like parts of the SAME website and use a consistent design system.
+
+==================================================
+MODULES
+==================================================
+
+There are 4 modules represented by the supplied screenshots.
+
+Analyze each screenshot carefully and identify:
+
+1. Header/navigation
+2. Hero area
+3. Main content
+4. Cards
+5. Images
+6. Buttons
+7. Forms
+8. Statistics
+9. Icons
+10. Footer
+11. Background effects
+12. Decorative elements
+13. Interactive elements
+14. Hover states
+15. Active/selected states
+16. Responsive layout
+
+Do not omit small but visually important elements.
+
+==================================================
+VISUAL ACCURACY
+==================================================
+
+Match the reference screenshots as closely as possible.
+
+Pay particular attention to:
+
+- Overall page width
+- Maximum content width
+- Margins
+- Padding
+- Section spacing
+- Grid structure
+- Column widths
+- Card dimensions
+- Border radius
+- Border thickness
+- Shadows
+- Glow effects
+- Background gradients
+- Text sizes
+- Font weights
+- Letter spacing
+- Line heights
+- Button dimensions
+- Icon sizes
+- Image aspect ratios
+- Alignment
+- Vertical rhythm
+
+Do not arbitrarily change the design because you think another layout would look better.
+
+==================================================
+DESIGN SYSTEM
+==================================================
+
+Create a reusable design system instead of styling every module independently.
+
+Define reusable:
+
+- Colors
+- Typography
+- Spacing
+- Border radius
+- Shadows
+- Gradients
+- Glow effects
+- Button styles
+- Card styles
+- Container widths
+
+Use CSS variables where appropriate.
+
+For example:
+
+--background
+--foreground
+--primary
+--secondary
+--accent
+--muted
+--border
+--card
+--glow
+--radius
+
+All four modules should use the same design system.
+
+==================================================
+NAVIGATION
+==================================================
+
+Create one shared navigation/header component.
+
+The navigation should remain consistent across all four modules.
+
+Implement:
+
+- Logo/brand
+- Navigation links
+- Active state
+- Hover states
+- Theme controls if present in the reference
+- Mobile navigation
+
+Navigation links should actually navigate to the corresponding modules.
+
+Do not duplicate the navigation code across pages.
+
+==================================================
+MODULE STRUCTURE
+==================================================
+
+Create each module as a separate React component/page.
+
+Use a structure similar to:
+
+src/
+├── components/
+│   ├── Navbar
+│   ├── Footer
+│   ├── Button
+│   ├── Card
+│   ├── SectionHeader
+│   └── ...
+│
+├── pages/
+│   ├── Module1
+│   ├── Module2
+│   ├── Module3
+│   └── Module4
+│
+├── data/
+│   └── ...
+│
+├── assets/
+│   └── ...
+│
+├── App
+└── index.css
+
+You may improve the structure if necessary.
+
+==================================================
+CONTENT
+==================================================
+
+Where the screenshots contain names, descriptions, statistics, events, members, or other content:
+
+- Reproduce the structure exactly.
+- Use the visible text when it is clearly readable.
+- If text cannot be determined, use sensible placeholder content.
+- Keep content in data files whenever possible rather than hardcoding repeated content into JSX.
+
+For example:
+
+const members = [
+  {
+    name: "Member Name",
+    role: "Role",
+    image: "/members/member-1.jpg"
+  }
+];
+
+This will allow the content to be replaced later without modifying the UI.
+
+==================================================
+IMAGES
+==================================================
+
+Use the images shown in the reference screenshots when they are provided as assets.
+
+If actual images are not available:
+
+- Create appropriate placeholders.
+- Preserve the exact image dimensions/aspect ratios.
+- Preserve the cropping behavior.
+- Do not distort images.
+
+Organize images cleanly:
+
+public/
+├── members/
+├── events/
+├── icons/
+└── images/
+
+==================================================
+INTERACTIONS
+==================================================
+
+If the screenshots indicate interactive UI, implement it as actual functionality.
+
+Examples:
+
+- Buttons should work.
+- Navigation should work.
+- Cards should have hover states.
+- Tabs should switch content.
+- Galleries should change images.
+- Dropdowns should open/close.
+- Forms should accept input.
+- Modals should open/close.
+- Theme selectors should change the theme.
+
+Do not create fake buttons that do nothing.
+
+==================================================
+ANIMATIONS
+==================================================
+
+Use subtle, polished animations where appropriate.
+
+Implement:
+
+- Page transitions
+- Section entrance animations
+- Hover transitions
+- Button hover effects
+- Card animations
+- Image transitions
+- Navigation transitions
+
+Animations should enhance the reference design rather than change it.
+
+Use CSS transitions and lightweight animation techniques where possible.
+
+==================================================
+RESPONSIVENESS
+==================================================
+
+The four modules must work on:
+
+- 1440px desktop
+- 1280px desktop
+- 1024px tablet
+- 768px tablet
+- 480px mobile
+- 375px mobile
+
+Do NOT simply scale the desktop layout down.
+
+Adapt:
+
+- Navigation
+- Grid columns
+- Typography
+- Card sizes
+- Spacing
+- Images
+- Buttons
+- Sections
+
+for smaller screens.
+
+There must be no unwanted horizontal scrolling.
+
+==================================================
+ACCESSIBILITY
+==================================================
+
+Implement:
+
+- Semantic HTML
+- Alt text
+- Keyboard-accessible controls
+- Visible focus states
+- Accessible buttons
+- Appropriate aria-labels
+- Good text contrast
+
+==================================================
+PERFORMANCE
+==================================================
+
+Keep the application lightweight.
+
+Avoid:
+
+- unnecessary dependencies
+- excessive DOM elements
+- unnecessarily heavy animations
+- duplicated components
+- duplicated CSS
+
+Use reusable components.
+
+==================================================
+IMPORTANT: DO NOT MODIFY THE DESIGN UNNECESSARILY
+==================================================
+
+The screenshots are the design specification.
+
+Do not:
+
+- change the color palette
+- change the layout
+- replace cards with different cards
+- remove decorative effects
+- simplify sections
+- invent a different navigation
+- replace the design with a generic template
+
+If something is ambiguous, make the smallest reasonable assumption while keeping the screenshot's visual language.
+
+==================================================
+FINAL QUALITY CHECK
+==================================================
+
+After implementing all 4 modules:
+
+1. Run the application.
+2. Open every module.
+3. Compare each module against its corresponding screenshot.
+4. Check alignment.
+5. Check spacing.
+6. Check typography.
+7. Check colors.
+8. Check image sizing.
+9. Check cards.
+10. Check navigation.
+11. Check responsive behavior.
+12. Check interactions.
+13. Fix any obvious differences.
+
+The final result should look like one professionally designed website containing the four supplied modules.
+
+Do not stop after creating a basic skeleton.
+
+Build the complete frontend.

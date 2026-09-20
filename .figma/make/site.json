@@ -1,0 +1,10 @@
+{
+  "description": "This web application delivers a fully functional, responsive website that mirrors the design of provided screenshots, ensuring a seamless user experience.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
