@@ -17,7 +17,7 @@ const DEFAULT_GUESTS: GuestCardProps[] = [
     role: 'Salesforce',
     bottomLeft: 'Guest of Honor',
     bottomRight: 'Keynote Speaker',
-    bottomRightColor: '#fbbf24', // Amber/gold
+    bottomRightColor: 'var(--accent-gold)',
   },
   {
     initials: 'SP',
@@ -25,7 +25,7 @@ const DEFAULT_GUESTS: GuestCardProps[] = [
     role: 'Salesforce & SJEC Alumnus',
     bottomLeft: 'Technical Mentor',
     bottomRight: 'Alumni Guide',
-    bottomRightColor: '#38bdf8', // Cyan
+    bottomRightColor: 'var(--neon-accent)',
   },
   {
     initials: 'RD',
@@ -33,7 +33,7 @@ const DEFAULT_GUESTS: GuestCardProps[] = [
     role: 'Principal, SJEC',
     bottomLeft: 'Presidential Address',
     bottomRight: 'Patron',
-    bottomRightColor: '#c084fc', // Lavender
+    bottomRightColor: 'var(--neon-primary)',
   },
   {
     initials: 'MD',
@@ -41,7 +41,7 @@ const DEFAULT_GUESTS: GuestCardProps[] = [
     role: 'HOD, Computer Science & Engg',
     bottomLeft: 'Program Chair',
     bottomRight: 'Department Head',
-    bottomRightColor: '#c084fc', // Lavender
+    bottomRightColor: 'var(--neon-secondary)',
   },
 ];
 
@@ -55,12 +55,12 @@ export function InaugurationSection() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
         {/* Ambient glow patches */}
         <div
-          className="absolute -top-16 left-1/4 w-[500px] h-[300px] rounded-full opacity-20 blur-[100px]"
-          style={{ background: 'radial-gradient(circle, #38bdf8 0%, #6366f1 50%, transparent 80%)' }}
+          className="absolute -top-16 left-1/4 w-[500px] h-[300px] rounded-full opacity-20 blur-[100px] transition-all duration-500"
+          style={{ background: 'radial-gradient(circle, var(--neon-accent) 0%, var(--neon-primary) 50%, transparent 80%)' }}
         />
         <div
-          className="absolute bottom-0 right-10 w-[450px] h-[350px] rounded-full opacity-20 blur-[120px]"
-          style={{ background: 'radial-gradient(circle, #8b5cf6 0%, #ec4899 40%, transparent 80%)' }}
+          className="absolute bottom-0 right-10 w-[450px] h-[350px] rounded-full opacity-20 blur-[120px] transition-all duration-500"
+          style={{ background: 'radial-gradient(circle, var(--neon-primary) 0%, var(--neon-secondary) 40%, transparent 80%)' }}
         />
 
         {/* Constellation SVG Network */}
@@ -70,13 +70,13 @@ export function InaugurationSection() {
         >
           <defs>
             <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="var(--neon-accent)" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="var(--neon-primary)" stopOpacity="0.1" />
             </linearGradient>
             <linearGradient id="wireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.7" />
-              <stop offset="50%" stopColor="#818cf8" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#c084fc" stopOpacity="0.7" />
+              <stop offset="0%" stopColor="var(--neon-accent)" stopOpacity="0.7" />
+              <stop offset="50%" stopColor="var(--neon-secondary)" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="var(--neon-primary)" stopOpacity="0.7" />
             </linearGradient>
           </defs>
 
@@ -91,17 +91,17 @@ export function InaugurationSection() {
           <line x1="83%" y1="18%" x2="96%" y2="30%" stroke="url(#lineGrad1)" strokeWidth="1" />
 
           {/* Network dots */}
-          <circle cx="5%" cy="38%" r="2" fill="#38bdf8" opacity="0.6" />
-          <circle cx="18%" cy="44%" r="3" fill="#818cf8" opacity="0.8" />
-          <circle cx="32%" cy="9%" r="2.5" fill="#c084fc" opacity="0.7" />
-          <circle cx="49%" cy="4%" r="2" fill="#38bdf8" opacity="0.6" />
-          <circle cx="39%" cy="60%" r="3" fill="#38bdf8" opacity="0.7" />
-          <circle cx="52%" cy="68%" r="2.5" fill="#818cf8" opacity="0.6" />
-          <circle cx="68%" cy="4%" r="2" fill="#818cf8" opacity="0.6" />
-          <circle cx="83%" cy="18%" r="2.5" fill="#c084fc" opacity="0.7" />
-          <circle cx="96%" cy="30%" r="2" fill="#38bdf8" opacity="0.6" />
+          <circle cx="5%" cy="38%" r="2" fill="var(--neon-accent)" opacity="0.6" />
+          <circle cx="18%" cy="44%" r="3" fill="var(--neon-primary)" opacity="0.8" />
+          <circle cx="32%" cy="9%" r="2.5" fill="var(--neon-secondary)" opacity="0.7" />
+          <circle cx="49%" cy="4%" r="2" fill="var(--neon-accent)" opacity="0.6" />
+          <circle cx="39%" cy="60%" r="3" fill="var(--neon-accent)" opacity="0.7" />
+          <circle cx="52%" cy="68%" r="2.5" fill="var(--neon-primary)" opacity="0.6" />
+          <circle cx="68%" cy="4%" r="2" fill="var(--neon-primary)" opacity="0.6" />
+          <circle cx="83%" cy="18%" r="2.5" fill="var(--neon-secondary)" opacity="0.7" />
+          <circle cx="96%" cy="30%" r="2" fill="var(--neon-accent)" opacity="0.6" />
 
-          {/* Wireframe Polyhedron in Bottom-Right Corner (matches screenshot) */}
+          {/* Wireframe Polyhedron in Bottom-Right Corner */}
           <g className="translate-x-[85%] translate-y-[62%] md:translate-x-[90%] md:translate-y-[60%]" opacity="0.45">
             <polygon points="50,10 90,40 75,90 25,90 10,40" fill="none" stroke="url(#wireGrad)" strokeWidth="1.2" />
             <polygon points="50,10 75,90 25,90" fill="none" stroke="url(#wireGrad)" strokeWidth="1.2" />
@@ -111,12 +111,12 @@ export function InaugurationSection() {
             <line x1="75" y1="90" x2="50" y2="60" stroke="url(#wireGrad)" strokeWidth="1.2" />
             <line x1="10" y1="40" x2="50" y2="10" stroke="url(#wireGrad)" strokeWidth="1.2" />
             <line x1="90" y1="40" x2="50" y2="10" stroke="url(#wireGrad)" strokeWidth="1.2" />
-            <circle cx="50" cy="10" r="2.5" fill="#38bdf8" />
-            <circle cx="90" cy="40" r="2.5" fill="#818cf8" />
-            <circle cx="75" cy="90" r="2.5" fill="#c084fc" />
-            <circle cx="25" cy="90" r="2.5" fill="#c084fc" />
-            <circle cx="10" cy="40" r="2.5" fill="#38bdf8" />
-            <circle cx="50" cy="60" r="2.5" fill="#fbbf24" />
+            <circle cx="50" cy="10" r="2.5" fill="var(--neon-accent)" />
+            <circle cx="90" cy="40" r="2.5" fill="var(--neon-primary)" />
+            <circle cx="75" cy="90" r="2.5" fill="var(--neon-secondary)" />
+            <circle cx="25" cy="90" r="2.5" fill="var(--neon-secondary)" />
+            <circle cx="10" cy="40" r="2.5" fill="var(--neon-accent)" />
+            <circle cx="50" cy="60" r="2.5" fill="var(--accent-gold)" />
           </g>
         </svg>
       </div>
@@ -124,29 +124,27 @@ export function InaugurationSection() {
       {/* Top Header Section */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6">
         <div>
-          <h1 className="text-4xl md:text-5xl lg:text-[46px] font-black text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl md:text-5xl lg:text-[46px] font-black tracking-tight leading-[1.15]" style={{ color: 'var(--text-primary)' }}>
             Inauguration &amp;{' '}
             <span
+              className="accent-italic"
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontStyle: 'italic',
-                fontWeight: 400,
-                background: 'linear-gradient(105deg, #38bdf8 0%, #c084fc 45%, #fbbf24 90%)',
+                background: 'linear-gradient(105deg, var(--neon-accent) 0%, var(--neon-secondary) 50%, var(--accent-gold) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
+                textShadow: 'var(--neon-text-glow)',
               }}
             >
               Mentorship
             </span>
             <br />
             <span
+              className="accent-italic"
               style={{
-                fontFamily: "'Playfair Display', serif",
-                fontStyle: 'italic',
-                fontWeight: 400,
-                background: 'linear-gradient(105deg, #fbbf24 0%, #f472b6 50%, #c084fc 100%)',
+                background: 'linear-gradient(105deg, var(--accent-gold) 0%, var(--neon-primary) 50%, var(--neon-secondary) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
+                textShadow: 'var(--neon-text-glow)',
               }}
             >
               Council
@@ -155,7 +153,7 @@ export function InaugurationSection() {
         </div>
 
         <div className="max-w-md lg:text-left">
-          <p className="text-[13.5px] leading-relaxed text-[#94a3b8]">
+          <p className="text-[13.5px] leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             Fostering technical curiosity, genuine mentorship, and bridging classroom theory with
             autonomous AI engineering practices.
           </p>
@@ -164,21 +162,22 @@ export function InaugurationSection() {
 
       {/* Horizontal Divider with Centered Sparkling Particle Cluster */}
       <div className="relative w-full py-4 mb-7">
-        <div className="w-full h-px bg-white/[0.08]" />
+        <div className="w-full h-px" style={{ backgroundColor: 'var(--border-subtle)' }} />
 
         {/* Floating Spark Cluster positioned above the center of divider */}
         <div className="absolute left-[49.5%] -top-3.5 -translate-x-1/2 flex flex-col items-center pointer-events-none">
           {/* Spark dots rising */}
-          <div className="w-1 h-1 rounded-full bg-[#c084fc] opacity-70 mb-1" />
+          <div className="w-1 h-1 rounded-full opacity-70 mb-1" style={{ backgroundColor: 'var(--neon-secondary)' }} />
           <div className="flex gap-1.5 items-center mb-0.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#818cf8] opacity-80" />
-            <div className="w-1 h-1 rounded-full bg-[#38bdf8] opacity-60" />
+            <div className="w-1.5 h-1.5 rounded-full opacity-80" style={{ backgroundColor: 'var(--neon-primary)' }} />
+            <div className="w-1 h-1 rounded-full opacity-60" style={{ backgroundColor: 'var(--neon-accent)' }} />
           </div>
           {/* Main glowing focal dot */}
           <div
-            className="w-2.5 h-2.5 rounded-full bg-[#e0f2fe]"
+            className="w-2.5 h-2.5 rounded-full"
             style={{
-              boxShadow: '0 0 10px 2px #38bdf8, 0 0 20px 4px #818cf8, 0 0 30px 6px #c084fc',
+              backgroundColor: 'var(--text-primary)',
+              boxShadow: '0 0 10px 2px var(--neon-primary), 0 0 20px 4px var(--neon-secondary), 0 0 30px 6px var(--neon-accent)',
             }}
           />
         </div>
@@ -186,11 +185,11 @@ export function InaugurationSection() {
 
       {/* Large Rounded Launch/Event Information Card */}
       <div
-        className="rounded-[24px] p-6 md:p-9 mb-12 relative overflow-hidden backdrop-blur-md"
+        className="rounded-[24px] p-6 md:p-9 mb-12 relative overflow-hidden backdrop-blur-md transition-all duration-500"
         style={{
-          backgroundColor: 'rgba(10, 12, 22, 0.85)',
-          border: '1px solid rgba(255, 255, 255, 0.08)',
-          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+          backgroundColor: 'var(--bg-card)',
+          border: '1px solid var(--border-medium)',
+          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.4), var(--neon-glow)',
         }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -198,35 +197,35 @@ export function InaugurationSection() {
           <div className="lg:col-span-7 flex flex-col items-start">
             {/* Official Launch & Keynote Badge */}
             <div
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4"
+              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold mb-4 transition-all duration-300"
               style={{
-                backgroundColor: 'rgba(23, 23, 48, 0.85)',
-                border: '1px solid rgba(99, 102, 241, 0.35)',
-                color: '#38bdf8',
+                backgroundColor: 'var(--surface)',
+                border: '1px solid var(--border-neon)',
+                color: 'var(--neon-primary)',
+                boxShadow: '0 0 12px var(--border-subtle)',
               }}
             >
               <span
-                className="w-2 h-2 rounded-full"
+                className="w-2 h-2 rounded-full transition-colors duration-300"
                 style={{
-                  backgroundColor: '#3b82f6',
-                  boxShadow: '0 0 6px #3b82f6',
+                  backgroundColor: 'var(--neon-accent)',
+                  boxShadow: '0 0 8px var(--neon-accent)',
                 }}
               />
               Official Launch &amp; Keynote
             </div>
 
             {/* Event Title with Mixed Typography */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[31px] font-bold text-white tracking-tight leading-snug mb-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-[31px] font-bold tracking-tight leading-snug mb-3" style={{ color: 'var(--text-primary)' }}>
               <span className="lg:inline-block">
                 AgentBlazer Club Launch &amp;{' '}
                 <span
+                  className="accent-italic"
                   style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontStyle: 'italic',
-                    fontWeight: 400,
-                    background: 'linear-gradient(100deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%)',
+                    background: 'linear-gradient(100deg, var(--neon-accent) 0%, var(--neon-secondary) 50%, var(--neon-primary) 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
+                    textShadow: 'var(--neon-text-glow)',
                   }}
                 >
                   Agentforce
@@ -234,13 +233,12 @@ export function InaugurationSection() {
               </span>
               <br />
               <span
+                className="accent-italic"
                 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontStyle: 'italic',
-                  fontWeight: 400,
-                  background: 'linear-gradient(100deg, #fbbf24 0%, #f472b6 60%, #c084fc 100%)',
+                  background: 'linear-gradient(100deg, var(--accent-gold) 0%, var(--neon-primary) 60%, var(--neon-secondary) 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
+                  textShadow: 'var(--neon-text-glow)',
                 }}
               >
                 Symposium
@@ -248,7 +246,7 @@ export function InaugurationSection() {
             </h2>
 
             {/* Event Description Paragraph */}
-            <p className="text-[#94a3b8] text-[13.5px] leading-relaxed max-w-xl">
+            <p className="text-[13.5px] leading-relaxed max-w-xl" style={{ color: 'var(--text-secondary)' }}>
               The Department of Computer Science &amp; Engineering founded the AgentBlazer Club to
               build an authentic student collective centered on autonomous intelligence, open agent
               frameworks, and industry partnership.
@@ -258,27 +256,29 @@ export function InaugurationSection() {
           {/* Right Column: Inauguration Date Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
             <div
-              className="w-full max-w-[430px] rounded-[20px] p-6 md:p-8 flex flex-col items-center justify-center text-center"
+              className="w-full max-w-[430px] rounded-[20px] p-6 md:p-8 flex flex-col items-center justify-center text-center transition-all duration-500"
               style={{
-                backgroundColor: 'rgba(8, 12, 24, 0.9)',
-                border: '1px solid rgba(14, 165, 233, 0.4)',
+                backgroundColor: 'var(--surface)',
+                border: '1px solid var(--border-neon)',
                 boxShadow:
-                  '0 0 30px rgba(14, 165, 233, 0.12), inset 0 0 20px rgba(14, 165, 233, 0.04)',
+                  '0 0 30px var(--border-subtle), inset 0 0 20px var(--border-subtle)',
               }}
             >
-              <div className="text-[#0ea5e9] tracking-[0.2em] text-[11px] font-bold uppercase mb-1">
+              <div
+                className="tracking-[0.2em] text-[11px] font-bold uppercase mb-1 transition-colors duration-300"
+                style={{ color: 'var(--neon-accent)', textShadow: '0 0 8px var(--neon-accent)' }}
+              >
                 INAUGURATED ON
               </div>
 
               <div
-                className="text-3xl sm:text-4xl my-2 font-normal"
+                className="text-3xl sm:text-4xl my-2 font-normal accent-italic"
                 style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontStyle: 'italic',
                   background:
-                    'linear-gradient(105deg, #38bdf8 0%, #818cf8 35%, #c084fc 70%, #f472b6 100%)',
+                    'linear-gradient(105deg, var(--neon-accent) 0%, var(--neon-secondary) 35%, var(--neon-primary) 70%, var(--accent-gold) 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
+                  textShadow: 'var(--neon-text-glow)',
                 }}
               >
                 August 25, 2025
@@ -286,21 +286,23 @@ export function InaugurationSection() {
 
               <div className="flex flex-nowrap items-center justify-center gap-2.5 mt-3">
                 <span
-                  className="px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap"
+                  className="px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300"
                   style={{
-                    backgroundColor: 'rgba(251, 191, 36, 0.08)',
-                    border: '1px solid rgba(251, 191, 36, 0.3)',
-                    color: '#fbbf24',
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-medium)',
+                    color: 'var(--accent-gold)',
+                    boxShadow: '0 0 10px var(--border-subtle)',
                   }}
                 >
                   Academic Year 2025–2026
                 </span>
                 <span
-                  className="px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap"
+                  className="px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300"
                   style={{
-                    backgroundColor: 'rgba(56, 189, 248, 0.08)',
-                    border: '1px solid rgba(56, 189, 248, 0.3)',
-                    color: '#38bdf8',
+                    backgroundColor: 'var(--bg-card)',
+                    border: '1px solid var(--border-neon)',
+                    color: 'var(--neon-primary)',
+                    boxShadow: '0 0 10px var(--border-subtle)',
                   }}
                 >
                   SJEC Campus
@@ -314,22 +316,21 @@ export function InaugurationSection() {
       {/* Honored Guests & College Leadership Header */}
       <div className="flex items-center gap-3 mb-6">
         <div
-          className="w-1 h-6 rounded-full"
+          className="w-1.5 h-6 rounded-full transition-all duration-300"
           style={{
-            background: 'linear-gradient(180deg, #38bdf8 0%, #a855f7 100%)',
-            boxShadow: '0 0 10px rgba(56, 189, 248, 0.8)',
+            background: 'linear-gradient(180deg, var(--neon-accent) 0%, var(--neon-primary) 100%)',
+            boxShadow: '0 0 12px var(--neon-primary)',
           }}
         />
-        <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">
+        <h3 className="text-xl md:text-2xl font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
           Honored Guests{' '}
           <span
+            className="accent-italic"
             style={{
-              fontFamily: "'Playfair Display', serif",
-              fontStyle: 'italic',
-              fontWeight: 400,
-              background: 'linear-gradient(105deg, #38bdf8 0%, #818cf8 40%, #c084fc 75%, #f472b6 100%)',
+              background: 'linear-gradient(105deg, var(--neon-accent) 0%, var(--neon-secondary) 40%, var(--neon-primary) 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
+              textShadow: 'var(--neon-text-glow)',
             }}
           >
             &amp; College Leadership
@@ -344,9 +345,9 @@ export function InaugurationSection() {
             key={guest.name}
             className="interactive-name-card rounded-[16px] p-5 flex flex-col justify-between"
             style={{
-              backgroundColor: 'rgba(11, 13, 24, 0.85)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
+              backgroundColor: 'var(--bg-card)',
+              border: '1px solid var(--border-medium)',
+              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px var(--border-subtle)',
             }}
           >
             {/* Top Row: Initials Avatar + Name & Role */}
@@ -354,29 +355,38 @@ export function InaugurationSection() {
               <div
                 className="initials-avatar w-11 h-11 rounded-xl flex items-center justify-center font-bold text-sm shrink-0 transition-all duration-300"
                 style={{
-                  backgroundColor: 'rgba(23, 22, 46, 0.9)',
-                  border: '1px solid rgba(99, 102, 241, 0.3)',
-                  color: '#38bdf8',
-                  boxShadow: '0 0 12px rgba(99, 102, 241, 0.15)',
+                  backgroundColor: 'var(--surface)',
+                  border: '1px solid var(--border-neon)',
+                  color: 'var(--neon-primary)',
+                  boxShadow: '0 0 12px var(--border-subtle)',
                 }}
               >
                 {guest.initials}
               </div>
 
               <div className="flex flex-col">
-                <div className="name-title text-white font-bold text-[15px] leading-tight transition-all duration-300">
+                <div className="name-title font-bold text-[15px] leading-tight transition-all duration-300" style={{ color: 'var(--text-primary)' }}>
                   {guest.name}
                 </div>
-                <div className="text-[12px] text-[#94a3b8] mt-1 leading-normal">
+                <div className="text-[12px] mt-1 leading-normal transition-colors duration-300" style={{ color: 'var(--text-muted)' }}>
                   {guest.role}
                 </div>
               </div>
             </div>
 
             {/* Bottom Row: Left Label & Right Tag */}
-            <div className="flex items-center justify-between text-[11px] pt-3.5 border-t border-white/[0.06]">
-              <span className="text-[#94a3b8]">{guest.bottomLeft}</span>
-              <span className="font-medium" style={{ color: guest.bottomRightColor }}>
+            <div
+              className="flex items-center justify-between text-[11px] pt-3.5"
+              style={{ borderTop: '1px solid var(--border-subtle)' }}
+            >
+              <span style={{ color: 'var(--text-muted)' }}>{guest.bottomLeft}</span>
+              <span
+                className="font-semibold transition-colors duration-300"
+                style={{
+                  color: guest.bottomRightColor || 'var(--neon-accent)',
+                  textShadow: '0 0 8px var(--border-subtle)',
+                }}
+              >
                 {guest.bottomRight}
               </span>
             </div>
