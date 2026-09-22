@@ -64,7 +64,7 @@ export function CoreWorkingCommittee() {
           {committeeList.map((member) => (
             <div
               key={member.name}
-              className="rounded-[14px] p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5"
+              className="interactive-name-card rounded-[14px] p-4 sm:p-5 flex items-center gap-4"
               style={{
                 backgroundColor: 'rgba(11, 13, 24, 0.75)',
                 border: '1px solid rgba(255, 255, 255, 0.07)',
@@ -73,7 +73,7 @@ export function CoreWorkingCommittee() {
             >
               {/* Initials box */}
               <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center font-bold text-xs sm:text-sm shrink-0"
+                className="initials-avatar w-11 h-11 rounded-xl flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 transition-all duration-300"
                 style={{
                   backgroundColor: 'rgba(23, 22, 46, 0.9)',
                   border: '1px solid rgba(99, 102, 241, 0.25)',
@@ -86,7 +86,7 @@ export function CoreWorkingCommittee() {
 
               {/* Member details */}
               <div className="flex flex-col min-w-0">
-                <div className="text-white font-bold text-[14.5px] leading-tight truncate sm:whitespace-normal">
+                <div className="name-title text-white font-bold text-[14.5px] leading-tight truncate sm:whitespace-normal transition-all duration-300">
                   {member.name}
                 </div>
                 <div className="text-xs text-[#94a3b8] mt-1 leading-normal">

@@ -342,7 +342,7 @@ export function InaugurationSection() {
         {guestList.map((guest) => (
           <div
             key={guest.name}
-            className="rounded-[16px] p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-0.5"
+            className="interactive-name-card rounded-[16px] p-5 flex flex-col justify-between"
             style={{
               backgroundColor: 'rgba(11, 13, 24, 0.85)',
               border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -352,7 +352,7 @@ export function InaugurationSection() {
             {/* Top Row: Initials Avatar + Name & Role */}
             <div className="flex items-start gap-3.5 mb-5">
               <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center font-bold text-sm shrink-0"
+                className="initials-avatar w-11 h-11 rounded-xl flex items-center justify-center font-bold text-sm shrink-0 transition-all duration-300"
                 style={{
                   backgroundColor: 'rgba(23, 22, 46, 0.9)',
                   border: '1px solid rgba(99, 102, 241, 0.3)',
@@ -364,7 +364,7 @@ export function InaugurationSection() {
               </div>
 
               <div className="flex flex-col">
-                <div className="text-white font-bold text-[15px] leading-tight">
+                <div className="name-title text-white font-bold text-[15px] leading-tight transition-all duration-300">
                   {guest.name}
                 </div>
                 <div className="text-[12px] text-[#94a3b8] mt-1 leading-normal">

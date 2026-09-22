@@ -485,3 +485,32 @@ body {
 
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Interactive Name Cards Hover Effects */
+.interactive-name-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.interactive-name-card:hover {
+  transform: translateY(-4px) !important;
+  background: var(--card-hover-bg) !important;
+  border-color: var(--card-hover-border) !important;
+  box-shadow: var(--card-hover-shadow) !important;
+}
+
+.interactive-name-card:hover .name-title {
+  background: var(--card-hover-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--card-hover-text-glow);
+}
+
+.interactive-name-card:hover .initials-avatar {
+  transform: scale(1.08);
+  border-color: var(--card-hover-border) !important;
+  box-shadow: 0 0 16px var(--card-hover-border) !important;
+}
