@@ -185,7 +185,7 @@ export function InaugurationSection() {
 
       {/* Large Rounded Launch/Event Information Card */}
       <div
-        className="rounded-[24px] p-6 md:p-9 mb-12 relative overflow-hidden backdrop-blur-md transition-all duration-500"
+        className="launch-hero-card rounded-[24px] p-6 md:p-9 mb-12 relative overflow-hidden backdrop-blur-md transition-all duration-500"
         style={{
           backgroundColor: 'var(--bg-card)',
           border: '1px solid var(--border-medium)',
@@ -256,7 +256,7 @@ export function InaugurationSection() {
           {/* Right Column: Inauguration Date Card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
             <div
-              className="w-full max-w-[430px] rounded-[20px] p-6 md:p-8 flex flex-col items-center justify-center text-center transition-all duration-500"
+              className="inaugurated-date-card w-full max-w-[430px] rounded-[20px] p-6 md:p-8 flex flex-col items-center justify-center text-center transition-all duration-500"
               style={{
                 backgroundColor: 'var(--surface)',
                 border: '1px solid var(--border-neon)',
@@ -265,14 +265,14 @@ export function InaugurationSection() {
               }}
             >
               <div
-                className="tracking-[0.2em] text-[11px] font-bold uppercase mb-1 transition-colors duration-300"
+                className="inaugurated-label tracking-[0.2em] text-[11px] font-bold uppercase mb-1 transition-all duration-300"
                 style={{ color: 'var(--neon-accent)', textShadow: '0 0 8px var(--neon-accent)' }}
               >
                 INAUGURATED ON
               </div>
 
               <div
-                className="text-3xl sm:text-4xl my-2 font-normal accent-italic"
+                className="inaugurated-date text-3xl sm:text-4xl my-2 font-normal accent-italic transition-all duration-300"
                 style={{
                   background:
                     'linear-gradient(105deg, var(--neon-accent) 0%, var(--neon-secondary) 35%, var(--neon-primary) 70%, var(--accent-gold) 100%)',
@@ -286,7 +286,7 @@ export function InaugurationSection() {
 
               <div className="flex flex-nowrap items-center justify-center gap-2.5 mt-3">
                 <span
-                  className="px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300"
+                  className="inaugurated-badge px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300"
                   style={{
                     backgroundColor: 'var(--bg-card)',
                     border: '1px solid var(--border-medium)',
@@ -297,7 +297,7 @@ export function InaugurationSection() {
                   Academic Year 2025–2026
                 </span>
                 <span
-                  className="px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300"
+                  className="inaugurated-badge px-3.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-300"
                   style={{
                     backgroundColor: 'var(--bg-card)',
                     border: '1px solid var(--border-neon)',

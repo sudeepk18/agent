@@ -518,3 +518,48 @@ body {
   border-color: var(--card-hover-border) !important;
   box-shadow: 0 0 16px var(--card-hover-border) !important;
 }
+
+/* Outside Rectangle Box Hover (Launch Card) */
+.launch-hero-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.launch-hero-card:hover {
+  border-color: var(--border-neon) !important;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.55), 0 0 35px var(--border-neon) !important;
+  transform: translateY(-2px);
+}
+
+/* Inside Rectangle Box Hover (Inaugurated Date Card) */
+.inaugurated-date-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.inaugurated-date-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: var(--card-hover-bg) !important;
+  border-color: var(--card-hover-border) !important;
+  box-shadow: 0 0 35px var(--card-hover-border), 0 0 60px var(--neon-primary), inset 0 0 20px var(--card-hover-border) !important;
+}
+
+.inaugurated-date-card:hover .inaugurated-label {
+  color: var(--card-hover-role-color) !important;
+  text-shadow: 0 0 12px var(--card-hover-role-color) !important;
+}
+
+.inaugurated-date-card:hover .inaugurated-date {
+  text-shadow: 0 0 20px var(--card-hover-border), 0 0 35px var(--neon-primary) !important;
+}
+
+.inaugurated-date-card:hover .inaugurated-badge {
+  border-color: var(--border-neon) !important;
+  box-shadow: 0 0 14px var(--border-subtle) !important;
+  transform: translateY(-1px);
+}
