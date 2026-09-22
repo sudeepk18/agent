@@ -13,6 +13,7 @@ import { AdminPanel } from './components/admin/AdminPanel';
 import { usePageSEO } from './components/usePageSEO';
 import { StarField } from './components/StarField';
 import { GeoShapeLeft, GeoShapeRight } from './components/DynamicGeoShape';
+import { apiUrl } from './config/api';
 
 type Page = 'home' | 'about' | 'events' | 'join' | 'admin' | 'admin-login';
 type Theme = 'violet' | 'inferno' | 'frost';
@@ -906,7 +907,7 @@ export default function App() {
 
   const handleAdminLogout = async () => {
     if (adminToken) {
-      await fetch('/api/auth/logout', {
+      await fetch(apiUrl('/api/auth/logout'), {
         method: 'POST',
         headers: { Authorization: `Bearer ${adminToken}` },
       });

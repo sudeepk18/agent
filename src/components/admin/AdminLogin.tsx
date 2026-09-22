@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { apiUrl } from '../../config/api';
 
 interface AdminLoginProps {
   onLoginSuccess: (token: string) => void;
@@ -17,7 +18,7 @@ export function AdminLogin({ onLoginSuccess, onReturnToSite }: AdminLoginProps) 
     setSubmitting(true);
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(apiUrl('/api/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useData, EventItem, TeamMemberItem, FacultyItem, GuestItem, CommitteeMemberItem, InaugurationData } from '../../context/DataContext';
+import { apiUrl } from '../../config/api';
 
 interface AdminPanelProps {
   token: string;
@@ -10,6 +11,15 @@ interface AdminPanelProps {
 type Tab = 'dashboard' | 'about' | 'members' | 'events' | 'media';
 
 export function AdminPanel({ token, onLogout, onReturnToSite }: AdminPanelProps) {
+  // Automatic apiUrl resolution for all relative /api endpoints
+  const fetchWithApiUrl = (input: RequestInfo | URL, init?: RequestInit) => {
+    if (typeof input === 'string' && input.startsWith('/api/')) {
+      return fetch(apiUrl(input), init);
+    }
+    return fetch(input, init);
+  };
+  const fetch = fetchWithApiUrl;
+
   const { refreshData } = useData();
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [store, setStore] = useState<any>(null);

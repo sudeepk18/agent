@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { apiUrl } from '../config/api';
 
 export interface GuestItem {
   id: string;
@@ -95,7 +96,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
   const refreshData = async () => {
     try {
-      const res = await fetch('/api/public/content');
+      const res = await fetch(apiUrl('/api/public/content'));
       if (res.ok) {
         const data = await res.json();
         if (data.inauguration) setInauguration(data.inauguration);
