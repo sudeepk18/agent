@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import introVideo from '../assets/intro.mp4';
+
+// Use public/intro.mp4 directly to avoid JS bundler unresolved import failures during CI/CD builds
+const DEFAULT_INTRO_VIDEO = '/intro.mp4';
 
 interface IntroScreenProps {
   onContinue: () => void;
@@ -8,7 +10,7 @@ interface IntroScreenProps {
 
 export const IntroScreen: React.FC<IntroScreenProps> = ({
   onContinue,
-  defaultVideoSrc = introVideo,
+  defaultVideoSrc = DEFAULT_INTRO_VIDEO,
 }) => {
   const [videoSrc, setVideoSrc] = useState<string>(defaultVideoSrc);
   const [videoLoaded, setVideoLoaded] = useState<boolean>(false);
