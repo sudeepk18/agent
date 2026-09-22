@@ -1,0 +1,256 @@
+{
+  "auth": {
+    "email": "admin@agentblazer.sjec.ac.in",
+    "passwordHash": "14be296ea9d3c5487130936a88fc5ab895bfbe8a2217a18ead4665086f3dc402",
+    "salt": "agentblazer_salt_2026"
+  },
+  "inauguration": {
+    "headingTitle": "Inauguration & Mentorship Council",
+    "description": "Fostering technical curiosity, genuine mentorship, and bridging classroom theory with autonomous AI engineering practices.",
+    "eventTitle": "AgentBlazer Club Launch & Agentforce Symposium",
+    "eventBadge": "Official Launch & Keynote",
+    "eventDescription": "The Department of Computer Science & Engineering founded the AgentBlazer Club to build an authentic student collective centered on autonomous intelligence, open agent frameworks, and industry partnership.",
+    "inauguratedDate": "August 25, 2025",
+    "inauguratedTags": [
+      "Academic Year 2025–2026",
+      "SJEC Campus"
+    ]
+  },
+  "guests": [
+    {
+      "id": "guest-1",
+      "initials": "SR",
+      "name": "Mr. Santosh Rebello",
+      "role": "Salesforce",
+      "bottomLeft": "Guest of Honor",
+      "bottomRight": "Keynote Speaker",
+      "bottomRightColor": "#fbbf24"
+    },
+    {
+      "id": "guest-2",
+      "initials": "SP",
+      "name": "Mr. Stephen Pinto",
+      "role": "Salesforce & SJEC Alumnus",
+      "bottomLeft": "Technical Mentor",
+      "bottomRight": "Alumni Guide",
+      "bottomRightColor": "#38bdf8"
+    },
+    {
+      "id": "guest-3",
+      "initials": "RD",
+      "name": "Dr. Rio D'Souza",
+      "role": "Principal, SJEC",
+      "bottomLeft": "Presidential Address",
+      "bottomRight": "Patron",
+      "bottomRightColor": "#c084fc"
+    },
+    {
+      "id": "guest-4",
+      "initials": "MD",
+      "name": "Dr. Melwyn D'Souza",
+      "role": "HOD, Computer Science & Engg",
+      "bottomLeft": "Program Chair",
+      "bottomRight": "Department Head",
+      "bottomRightColor": "#c084fc"
+    }
+  ],
+  "faculty": [
+    {
+      "id": "fac-1",
+      "initials": "KF",
+      "name": "Mr. Keith Fernandes",
+      "role": "Assistant Professor & Faculty Coordinator",
+      "imageUrl": "/assets/mr-keith-raymond-fernandes-9wTqGZgT.jpg"
+    },
+    {
+      "id": "fac-2",
+      "initials": "NR",
+      "name": "Ms. Nisha Roche",
+      "role": "Assistant Professor & Faculty Advisory",
+      "imageUrl": ""
+    }
+  ],
+  "studentTeam": [
+    {
+      "id": "team-1",
+      "name": "Ruben Saldanha",
+      "role": "EXECUTIVE LEADERSHIP",
+      "title": "President",
+      "titleClass": "badge-cyan",
+      "description": "Guiding club vision, university collaborations, and strategic workshop series.",
+      "highlighted": true,
+      "imageUrl": ""
+    },
+    {
+      "id": "team-2",
+      "name": "Ajay Preenal Dsouza",
+      "role": "VICE PRESIDENTIAL OFFICE",
+      "title": "Vice President",
+      "titleClass": "badge-violet",
+      "description": "Coordinating student mentorship, event operations, and community growth.",
+      "highlighted": false,
+      "imageUrl": ""
+    },
+    {
+      "id": "team-3",
+      "name": "Stevin Dsouza",
+      "role": "TECHNICAL ARCHITECTURE",
+      "title": "Technical Lead",
+      "titleClass": "badge-violet",
+      "description": "Overseeing hands-on labs, hackathon problem sets, and agentic workflows.",
+      "highlighted": false,
+      "imageUrl": ""
+    },
+    {
+      "id": "team-4",
+      "name": "Frenny Chrystal Saldanha",
+      "role": "OPERATIONS & EVENTS",
+      "title": "Event Coordinator",
+      "titleClass": "badge-violet",
+      "description": "Managing venue logistics, speaker sessions, and live masterclass schedules.",
+      "highlighted": false,
+      "imageUrl": ""
+    },
+    {
+      "id": "team-5",
+      "name": "Joyline Galbao",
+      "role": "ADMINISTRATION",
+      "title": "Secretary",
+      "titleClass": "badge-cyan",
+      "description": "Documentation, accreditation reporting, meeting minutes, and member onboarding.",
+      "highlighted": true,
+      "imageUrl": ""
+    },
+    {
+      "id": "team-6",
+      "name": "Chinthan N V",
+      "role": "PUBLIC RELATIONS",
+      "title": "Media & PR Lead",
+      "titleClass": "badge-violet",
+      "description": "Brand presence, social outreach, session photography, and promotional assets.",
+      "highlighted": false,
+      "imageUrl": ""
+    },
+    {
+      "id": "team-1790011287331",
+      "name": "Thanushree",
+      "role": "hbh",
+      "title": "jj j",
+      "titleClass": "badge-cyan",
+      "description": "jjjj",
+      "imageUrl": "/uploads/1790011286317_AgentBlazer_Logo.jpg"
+    }
+  ],
+  "committee": [
+    {
+      "id": "comm-1",
+      "initials": "PR",
+      "initialsColor": "#38bdf8",
+      "name": "Prajwal Royston Cordiero",
+      "role": "AI & LLM Research Group"
+    },
+    {
+      "id": "comm-2",
+      "initials": "CA",
+      "initialsColor": "#c084fc",
+      "name": "Chacko P Abraham",
+      "role": "Model Evaluation Benchmarks"
+    },
+    {
+      "id": "comm-3",
+      "initials": "AR",
+      "initialsColor": "#fbbf24",
+      "name": "Alma Roxane Pereira",
+      "role": "Project Operations & Labs"
+    }
+  ],
+  "events": [
+    {
+      "id": "ev-1",
+      "date": "February 14, 2026",
+      "badge": "FLAGSHIP MASTERCLASS",
+      "badgeClass": "badge-violet",
+      "title": "Master the Future: A Hands-on GSoC & LLMs Workshop",
+      "description": "Practical masterclass on open-source Git PR workflows, Retrieval-Augmented Generation (RAG), Gemini AI, LangChain, LlamaIndex, CrewAI, and live Gradio prototyping.",
+      "meta": "80 Shortlisted Students",
+      "tracks": null,
+      "leads": null,
+      "platform": null,
+      "coverImage": "",
+      "galleryImages": []
+    },
+    {
+      "id": "ev-2",
+      "date": "March 25, 2026",
+      "badge": "LIVE CONTEST",
+      "badgeClass": "badge-orange",
+      "title": "PROMPT OPS-2K26 Challenge",
+      "description": "Fast-paced prompt engineering hackathon featuring automated test suites, iterative refinement, teamwork, and live algorithmic problem solving.",
+      "meta": "10 Contest Photos",
+      "tracks": [
+        "Track 1: 1st Year Engineers",
+        "Track 2: 2nd Year Engineers"
+      ],
+      "leads": null,
+      "platform": null,
+      "coverImage": "",
+      "galleryImages": []
+    },
+    {
+      "id": "ev-3",
+      "date": "August 25, 2025",
+      "badge": "SYMPOSIUM KEYNOTE",
+      "badgeClass": "badge-cyan",
+      "title": "Agentforce Technical Deep-Dive",
+      "description": "Guiding undergraduate engineers from prompt prediction to autonomous agentic architectures, Salesforce Data Cloud integration, and real-time enterprise workflows.",
+      "meta": "CSE Auditorium",
+      "tracks": null,
+      "leads": null,
+      "platform": null,
+      "coverImage": "",
+      "galleryImages": []
+    },
+    {
+      "id": "ev-4",
+      "date": "March 18, 2026",
+      "badge": "STUDENT LAB",
+      "badgeClass": "badge-green",
+      "title": "Demystifying Generative Models",
+      "description": "Exploring Transformer mechanics, multi-agent consensus networks, and comparative latency benchmarks.",
+      "meta": null,
+      "tracks": null,
+      "leads": "Session Leads: Prajwal Royston Cordiero & Chacko P Abraham",
+      "platform": null,
+      "coverImage": "",
+      "galleryImages": []
+    },
+    {
+      "id": "ev-5",
+      "date": "April 01, 2026",
+      "badge": "SECURITY WORKSHOP",
+      "badgeClass": "badge-red",
+      "title": "Cyber Security & Career Pathways",
+      "description": "Interactive demonstrations covering Shodan discovery, OSINT methods, CVE vulnerability analysis, SQL injection scenarios, and the Cyber Kill Chain.",
+      "meta": null,
+      "tracks": null,
+      "leads": null,
+      "platform": null,
+      "coverImage": "",
+      "galleryImages": []
+    },
+    {
+      "id": "ev-6",
+      "date": "May 22, 2026",
+      "badge": "DEVELOPER LAB",
+      "badgeClass": "badge-blue",
+      "title": "Hands-on Agentforce & AI Agents",
+      "description": "Applied development lab creating Flex Prompts, dynamic contextual Sales Email templates, and agentic AI pipelines.",
+      "meta": null,
+      "tracks": null,
+      "leads": null,
+      "platform": "Platform: Salesforce Developer Sandbox",
+      "coverImage": "",
+      "galleryImages": []
+    }
+  ]
+}

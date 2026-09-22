@@ -1,0 +1,10 @@
+# AgentBlazer Club — Robots.txt
+# https://agentblazer.sjec.ac.in
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://agentblazer.sjec.ac.in/sitemap.xml
